@@ -52,26 +52,35 @@ body{
     width: 100px;
     border-shadow: 0px 0px 5px #ccc;
 }
+.icone{
+padding: 1px;
+position: relative;
+bottom: 2px;
+}
 
 .t1{
     text-align: center;
-    padding-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding: 10px 0px 10px 0;
+
+    width: 100%;
+    background-color: #265c8a;
 }
 .t2 {
     text-align: left;
     font-size: 12px;
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 80%;
+
     float: right;
-    color: green ;
+    color: #ffffff ;
 
 }
 .t4{
     color: red;
     font-size: smaller;
-}
-.headJumb{
 }
 
 .jumbotron{
@@ -79,4 +88,7 @@ body{
 }
 .cor-barra{
     background-color: #06325f;
+}
+.margem{
+    margin-left: 12px;
 }
