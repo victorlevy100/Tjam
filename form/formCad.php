@@ -20,19 +20,19 @@
         <nav class="navbar navbar-expand-sm navbar-dark cor-barra" style="display: block; ">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#"><img class="icone" src="../img/baseline_home_black_18dp.png" alt="">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Usuários</a>
+                    <a class="nav-link" href="#"><img class="icone" src="../img/baseline_insert_drive_file_black_18dp.png" alt="">Usuários</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Alvarás</a>
+                    <a class="nav-link" href="#"><img class="icone" src="../img/baseline_insert_drive_file_black_18dp.png" alt="">Alvarás</a>
                 </li>
             </ul>
         </nav>
         <div class="jumbotron">
             <div class="headJumb">
-                <h6 t3=""><strong>Dados do Alvará</strong></h6>
+                <h5 t3=""><strong>Dados do Alvará</strong></h5>
                 <p class="t4">Campos Obrigatórios (*)</p>
             </div>
             <div>
@@ -40,7 +40,7 @@
                 <form action="#" method="post">
                 <div class="card-group">
                     <label>*Número da Conta Judicial:</label>
-                    <input type="text" name="contajud" required>
+                    <input  type="text" name="contajud" onkeyup="limitarInput(this)" required>
 
                 </div>
                 <div class="card-group">
@@ -50,29 +50,37 @@
                 </div>
                 <div class="card-group">
                     <label>*Processo</label>
-                    <input type="number" name="processo" >
+                    <input type="number" name="processo" ><br/><br/>
                     <input type="text" name="descricaoprocesso">
 
                 </div>
                 </form>
             </div>
             <div>
-                <h6><strong>Dados do Sacador</strong></h6>
+                <h5><strong>Dados do Sacador</strong></h5>
                 <form action="#" method="post">
                 <div>
-                    <label>* Natureza do Sacador 1:</label>
-                    <input type="checkbox" name="pfisica"> Pessoa Fisica
-                    <input type="checkbox" name="pjuridica"> Pessoa Juridica
+                    <label><strong>* Natureza do Sacador 1:</strong></label>
+                    <input  type="radio" name="pfisica"> Pessoa Fisica
+                    <input type="radio" name="pjuridica"> Pessoa Juridica
+                </div>
+
+                <div>
+                    <label class="margem" ><strong>Nome do Sacador:</strong></label><br/>
+                    <select class="margem"  name="" id="">
+                        <option value="">Sacadores</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="margem"><strong>Natureza do Sacador 2:</strong></label>
+                    <input type="radio" name="pessoa" value='fisica'> Pessoa Fisica
+                    <input type="radio" name="pessoa" value='juridica'> Pessoa Juridica
                 </div>
                 <div>
-                    <label>Natureza do Sacador 2:</label>
-                    <input type="checkbox" name="pfisica"> Pessoa Fisica
-                    <input type="checkbox" name="pjuridica"> Pessoa Juridica
-                </div>
-                <div>
-                    <label>* Representação Processual:</label>
-                    <input type="checkbox" name="advogado"> Advogado
-                    <input type="checkbox" name="juspostulandi"> Jus Postulandi
+                    <label><strong>* Representação Processual:</strong></label>
+                    <input type="radio" name="advogado"> Advogado
+                    <input type="radio" name="juspostulandi"> Jus Postulandi
                 </div>
 
                 <div>
@@ -83,8 +91,10 @@
             </div>
         </div>
     </div>
+    
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     </body>
     </html>
